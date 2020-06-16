@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="content">
+  {% load static %}
+    <h4 class="desription">I build trust though quality <br> &nbsp;&nbsp;&nbsp;&nbsp;design.</h4>
+    <p id="content"></p>
+</div>
+
+<script>
+     var about= "I build digital products , digital creative design and develop unique brand identities "+
+                   "and tailor-made digital solutions. My aim is to help my clients  from defination of their digital strategy "+
+                   "to the realization of their digital ecosystem. I use simple aproaches to solve both simple and complex ploblems "
+     var content = "I'm Onderi Jonathan, Ojay by nickname software developer from Kenya."+
+     " I design , build all categories of web applications from e-commerce sites to personal blogs."
+     var h1 = "<h5 class='name'>Skills & Experience</h5>"
+     var c1 = "I a'm full-stack developer , specialized in HTML, CSS, JS and javascript frameworks Reactjs"+
+     " Vue.js. Python , C++ & C programing languages."
+     var c2 = "I also have experience working with open source CMS like(WordPress).";
+     var c3 = "You have my guarentee that your work will be done in due time.I am self driven and parssionate "+
+            "on my work. I always deliver within a given timeline.";
+     var h3 ="<h5 class='name'> Quality Services</h5>"  
+     var c4 = "Client satisfactory is always my privilage. Here is some of <a class='link' href='{% url 'work' %}'>my work "+ 
+              "<i class='fas fa-chevron-right'></i></a>"
+    var about = '<span>' +about+ '</span>'+'<br><br>'
+     var ele =  '<span>'+content+'</span>' +'<br><br><br>';
+     var c1 = '<span>' +c1+ '</span>'+'<br>'
+     var c2 = '<span>' +c2+'</span>'+'<br><br><br>'
+     var c3 = '<span>' +c3+'</span>'+'<br><br>'
+     var c4 = '<br><span>' +c4+'</span>'+'<br><br><br>'
+     var clock = '<img src={% static "media/clock.gif" %} class="gif"></img><br>'
+     var img ='<img src={% static "media/webdev1.jpeg" %} class="gif img1"></img><br>'
+     var h2 = "<h5 class='name'>Timely Delivery</h5> <br>"
+     
+     //$(name).addClass(name)
+     var ele =ele+c1+c2+about+clock+h2+c3+img+h3+c4
+     function Dispaly(element){
+       $(element).hide().appendTo('#content').each(function (i) {
+         $(this).delay(150* i).css({
+            display: 'inline',
+             opacity: 0
+         }).animate({
+             opacity: 1
+         }, 10);
+     });
+     }
+  
+        
+</script>
+
+
+{% endblock %}

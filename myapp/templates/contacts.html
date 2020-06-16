@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="content">
+ <h5 class="desription">Let's Talk.</h5>
+ <span class="name">Get in touch via email <a href="mailto:jonathanonder2018@yahoo.com" class="link">jonathanonder2018@yahoo.com</a></span>
+ <br>
+ <span class="name">You can also send me an email by filling the form bellow</span>
+
+ <div class="row">
+     <div class="col-sm-12 col-md-12 col-lg-8 col-xl-6">
+        <form method="POST" action="{% url 'contacts' %}" id='formData'>
+            {% csrf_token %}
+            <div class="form-group" >
+                <label for="exampleFormControlInput0" class="label">Name:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput0" placeholder="name" >
+              </div>  
+            <div class="form-group">
+              <label for="exampleFormControlInput1" class="label" >Email address:</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+            </div>      
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1" class="label">message:</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+            </div>
+            <button class="btn btn-lg link " type="submit" >Submit</button>
+          </form>
+          <div id="message"></div>
+       <div>
+         <br>
+         <span style="color: #fff;">You can also get in touch through <br> Tel No <span class='link'>
+           +254742446941
+         </span></span>
+       </div>
+       <br>
+       <br>
+       <span class="font">Have a project , idea or problem you'd like to discuss? <br> Send me a direct message to any of my social media handles bellow. <br>
+        Follow me , let's chat , let's build great projects.
+      </span>
+      <br>
+       <div>
+        <a href="#" ><i class="fab fa-facebook icon text-center"></i></a>
+        <a href="#"><i class="fab fa-whatsapp icon"></i></a>
+        <a href="#" ><i class="fab fa-twitter icon"></i></a>
+        <a href="#" ><i class='fab fa-instagram icon'></i></a>
+        <a href="#" ><i class="fab fa-telegram "></i></a>
+        <a href="#" ><i class="fab fa-linkedin icon"></i> </a>
+        <a href="#" ><i class="fab fa-reddit icon"></i></a>    
+       </div>
+       <br>   
+     </div>
+ </div>
+
+
+ <script>
+       function getCookie(name) {
+          var cookieValue = null;
+          if (document.cookie && document.cookie !== '') {
+              var cookies = document.cookie.split(';');
+              for (var i = 0; i < cookies.length; i++) {
+                  var cookie = cookies[i].trim();
+                  // Does this cookie string begin with the name we want?
+                  if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                      cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                      break;
+                  }
+              }
+          }
+          return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+
+        function submitButton(event){
+           event.preventDefault()
+           const myform = event.target
+           const formData = new FormData(myform)
+           const endpoint = myform.getAttribute('action')
+           const method = myform.getAttribute('method')
+           const xhr = new XMLHttpRequest()
+           xhr.responseType = 'json'
+           xhr.open(method, endpoint)
+           xhr.setRequestHeader('X-CSRFToken', csrftoken)
+           xhr.setRequestHeader('Content-Type', 'application/json')
+           xhr.onload = function(){
+              responseMessage = xhr.response.message
+             $('#message').html('<span>'+responseMessage+'</span>').css('color','#28a745') 
+             $('#exampleFormControlInput0').val('')
+             $('#exampleFormControlInput1').val('')
+             $('#exampleFormControlTextarea1').val('')
+           }
+           xhr.onerror = function(){
+             $('#message').html('<span>an error occured, try again later</span>').css('color','#ffc107') 
+             $('#exampleFormControlInput0').val('')
+             $('#exampleFormControlInput1').val('')
+             $('#exampleFormControlTextarea1').val('')
+     
+           } 
+           xhr.ontimeout =function (){
+            $('#message').html('<span>please make sure your internet is connected</span>').css('color','#ffc107')
+           }
+           xhr.send(formData)
+         }
+
+         
+      const submit = document.getElementById('formData')
+      submit.addEventListener('submit', submitButton)
+      
+    
+      </script>
+</div>
+{% endblock%}

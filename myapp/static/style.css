@@ -1,0 +1,227 @@
+
+   .navigation{
+    background-color: #050505;
+     box-shadow:0px 1px 3px 0px rgba(255,255,255,0.75) ;
+   }
+
+   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+   @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+
+
+p {
+  font-family: 'Source Code Pro', monospace;  
+  
+}
+
+
+@media screen and (max-width:420px){
+    .content{
+        padding: 20px 10px 3.5rem 10px;
+        
+    }
+    p{
+        max-width:400px;
+        color: #c0c0c0;
+        font-size: 1rem;
+        
+    }
+    .desription{
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+   .img{
+       height: 15rem !important;
+   }
+}
+
+
+@media screen and (max-width:776px){
+    .content{
+        padding: 50px 20px 3.5rem 20px;
+
+    }
+    p{  
+        color: #c0c0c0;
+        width: 300px;
+        font-size: 1rem;
+    }
+    .desription{
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    .img{
+        height: 15rem !important;
+    }
+}
+
+@media screen and (min-width:777px){
+    .content{
+        padding: 100px 3.5rem 3.5rem 50px;
+    }
+    p{
+        width:500px;
+        color: #c0c0c0;
+        font-size: 1rem;
+        
+    }
+    .desription{
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+  
+}
+
+@media screen and (min-width:1190px){
+    .content{
+        padding: 100px 0px 3.5rem 50px;
+    }
+    p{
+        width:700px;
+        color: #c0c0c0;
+        font-size: 1rem;
+        
+    }
+    .desription{
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    
+}
+.name{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+
+.link, .link:hover{
+    color: #F0861B;
+    font-family: monospace, 'Source Code Pro';  
+  
+}
+
+
+
+.label{
+    color: #c0c0c0;
+}
+.fa:hover{
+    opacity: 0.7;
+}
+
+
+
+.page-footer{
+    position: absolute;
+    bottom: 0px;
+    height: 3rem;
+    width: 100vw;
+  
+    
+    
+
+}
+.footer{
+    background-color: #0000;
+  
+
+}
+.page-content{
+    position: relative;
+    min-height: 100vh;
+}
+.content-wrap{
+    padding-bottom: 4rem;
+}
+.fa:hover{
+    opacity: 0.7;
+  }
+
+  .icon{
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    padding:0.5rem;
+    border-radius: 50%;
+  }
+  .fa-facebook{
+    background-color: #007bb5 ;
+  }
+  .fa-twitter{
+    background: #55ACEE;
+  }
+  .fa-linkedin, .fa-telegram{
+    background: #007bb5;
+  }
+  .fa-instagram{
+    background: hsl(24, 93%, 56%);
+  }
+  .fa-reddit{
+    background: #ff5700;
+  }
+  .fa-whatsapp{
+    background: #28a745;
+  }
+   .fa-search{
+       color: #fff;
+   }
+  .my-0{
+    background-color: #6c757d;
+    width: 98%;}
+ .footer-link{
+     color: #969ca1;
+ }   
+ .fa-telegram{
+     font-size: 3rem;
+     text-align: center;
+     color:#fff;
+     border-radius: 50%;
+     margin:0.5rem;
+ }
+ 
+.font{
+    font-family: 'sriracha', 'aclonica',"Yatra One" ,'Roboto';  
+    color: #c0c0c0;
+    font-weight: bolder;
+    
+}
+.code{
+    font-family:'Just Another Hand',cursive ,"Great Vibes";  
+}
+  .card1{
+    box-shadow:0px 0px 3px 0px rgba(255,255,255,0.75);
+    width: 100%;
+
+
+  }
+  .img{
+      height: 20rem;
+      width: 100%;
+      border-radius: 4px;
+  }
+  code{
+      font-family: 'aclonica';
+  }
+  .projects{
+      color: #e9548d;
+      font-size: 1.3rem;
+  }
+  .success{
+      color: green;
+  }
+  .gif{
+      width:13rem;
+      height: 8rem;
+  }
+  .img1{
+   margin-left: 3rem;
+   border-radius: 5px;
+  }

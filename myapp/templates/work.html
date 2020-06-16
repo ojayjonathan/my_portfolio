@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content%}
+{% load static %}
+ <div class="content" style="padding-top: 20px;">
+    <h5 class="name">Front-end Developer Building <br>&nbsp;&nbsp; Successful Websites</h5>
+    <span class="font">I have build successful websites and web apps that are Fast , Responsive, Reliable and <br>
+     Interactive.
+    </span>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-10 col-xl-7">
+           
+        <div >
+            <img src="{% static  'media/mypage_img.png' %}" alt="my Blog" class="img card1">
+            <br>
+            <br>
+           <span class="projects">1. my Blog</span>
+           <p class="font">
+               You have to start somewhare. My Blog This is my first successful  <br>  website.
+               <a href="#" class="link">visit <i class="fas fa-chevron-right"></i></a>
+           </p>
+           <br>
+           <br>
+        </div>
+        <div>
+            <img src="{% static  'media/music.jpeg' %}" alt="Eplay music app" class="img card1">
+             <br>
+             <br>
+           <span class="projects">2. Eplay music app</span>
+           <p class="font">
+               Eplay is a music streaming app which is highly Responsive , fast & well integrated<br>
+               Main features include a powerful music recommendation algorithm based on user facial expresion and
+               his/her activity. If you love music , then you will love eplay
+               <a href="#" class="link">visit <i class="fas fa-chevron-right"></i></a>
+           </p>
+           <br>
+           <br>
+        </div>
+        <h5 class="font" ><br><br>
+        Hey, Are you intrested with any of my design, <br>
+         or new design? <a class="link" href="{% url 'contacts' %}" >let's talk <i class="fas fa-chevron-right"></i></a>
+        </h5>
+      </div>
+    </div>
+
+ </div>
+{% endblock%}

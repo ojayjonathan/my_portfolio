@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content%}
+ <div class="content" style="padding-top: 20px;">
+    <span class="font">
+        I start with listening , brainstorming to identify the needs  of my client's unique design, goals
+        and vision. <br>  Client satisfactory is always my privilage.
+        <br>
+        <br>
+    </span>
+    <div>
+        <i class="fas fa-pen-nib mb-2"></i>
+        <h5 class="name">Web Design</h5>
+        <p>
+            My goal is to improve user experience through designing;</p>
+            <ul class="font">
+                <li>Reliable </li>
+                <li>Engaging</li>
+                <li>Interactive</li>
+            </ul>
+        <p>web pages.</p>
+        <br>       
+    </div>
+    <div>
+        <i class="fas fa-code mb-2"></i>
+        <h5 class="name">Web Development</h5>
+        <p>A we buld website should be;</p>
+        <ul class="font">
+            <li>Responsive</li>
+            <li>Fast</li>
+            <li>Integrated</li>
+            <li>Reliable</li>
+        </ul>
+        <p>These are factor i must consider during development.</p>
+    </div>
+
+    <div>
+        <i class="fas fa-brain mb-2"></i>
+        <h5 class="name">AI & ML Development</h5>
+       <p>
+        Do you have an idea of building a smart and intelligence system or application?
+        Great, here is an expert in Natural Language Understanding(NLU) and Computer Vision. <br>
+        I build highly scalable machine learning algorithms.
+        <br>
+        <br>
+       </p>
+    </div>
+    <div>
+        <i class="fas fa-history mb-2"></i>
+        <h5 class="name">Data Visualization</h5>
+        <p>
+            I do data Summarization, getting Visual boards and graphical reports on your data. <br>
+            This improves data understanding and business trends understanding.
+        </p>
+    </div>
+    <div>
+        <i class="fas fa-user-friends mb-2"></i>
+        <h5 class="name">Mentorship Programme</h5>
+       <p>
+         Are you stack? or you don't have an idea were to start? <br>
+         Do you wish to build a chatbot , or train a neural network using tensorflow & pytorch? <br> or
+         maybe you wish to make your own portfolial . Here i will provide or direct you to helpful resources to kick-start your passion.
+         If you will love to share any idea with me or any inqueries <a class="link" href="{% url 'contacts' %}" >let's talk <i class="fas fa-chevron-right"></i></a>
+
+         <br>
+        <br>
+       </p>
+    <style>
+  .fa-brain, .fa-history, .fa-code, .fa-pen-nib, .fa-user-friends{
+    color: #007bb5;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4rem;
+    margin-left: 4rem;
+    }
+
+   
+    </style>
+    
+ </div>
+{% endblock%}

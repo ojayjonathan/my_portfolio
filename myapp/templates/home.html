@@ -1,0 +1,43 @@
+
+{% extends 'base.html'%}
+{% block content%}
+{% load static%}
+  
+  <div class="content">
+       <span class="name">Hi , i'm <span class="code">Ojay</span> </span>
+       <h4 class="desription">Designer , Web Developer ,Machine learning <br>&nbsp;Engineer and Mentor.</h4>
+       <p id="content"></p>
+  </div>
+ 
+<script>
+        var about= "I build digital products , digital creative design and develop unique brand identities "+
+                   "and tailor-made digital solutions. My aim is to help my clients  from defination of their digital strategy "+
+                   "to the realization of their digital ecosystem. I use simple aproaches to solve both simple and complex ploblems. "
+        var  content = 'Have an intresting project or idea?';
+        const hrf = '{% url "about" %}';
+        const hrf2 = '{% url "contacts" %}';
+        const icon   = ' <i class="fas fa-chevron-right"></i>'
+        var ele1 = '<span>' + about.split('').join('</span><span>') + '</span>';
+        var ele2 =  '<span>' + content.split('').join('</span><span>') + '</span>';
+        const more = '<a class="link" href='+hrf+'>'+' learn more '+ icon +'</a>'+'<br>'+'<br>'
+        const contact = '<a class="link" href='+hrf2+'>'+' let'+'s talk '+ icon +'</a>'
+        
+        
+
+        //$(more).addClass('link')
+        var ele =ele1 + more  + ele2  + contact 
+        function Dispaly(element){
+          $(element).hide().appendTo('#content').each(function (i) {
+            $(this).delay(10 * i).css({
+                display: 'inline',
+                opacity: 0
+            }).animate({
+                opacity: 1
+            }, 10);
+        });
+        }
+        Dispaly(ele)
+           
+  </script>
+ 
+{% endblock%}
