@@ -4,40 +4,105 @@
 {% load static%}
   
   <div class="content">
-       <span class="name">Hi , i'm <span class="code">Ojay</span> </span>
-       <h4 class="desription">Designer , Web Developer ,Machine learning <br>&nbsp;Engineer and Mentor.</h4>
+       <span class="name">Hi, i'm <span class="code">Ojay</span> </span>
+       <h4 class="desription">Designer, Web Developer, Machine learning <br>&nbsp;Engineer and Mentor.</h4>
        <p id="content"></p>
+       
   </div>
+   <div class="quote">
+    <blockquote class="decoration">"Good design is all about making other designers feel like idiots because 
+      the idea wasn't theirs."
+      <cite>&mdash;Frank Chimeo</cite>
+    </blockquote>
+    
+</div>
  
 <script>
-        var about= "I build digital products , digital creative design and develop unique brand identities "+
+        var about= "I build digital products, digital creative design and develop unique brand identities "+
                    "and tailor-made digital solutions. My aim is to help my clients  from defination of their digital strategy "+
                    "to the realization of their digital ecosystem. I use simple aproaches to solve both simple and complex ploblems. "
         var  content = 'Have an intresting project or idea?';
         const hrf = '{% url "about" %}';
         const hrf2 = '{% url "contacts" %}';
-        const icon   = ' <i class="fas fa-chevron-right"></i>'
-        var ele1 = '<span>' + about.split('').join('</span><span>') + '</span>';
+        const icon   = '<i class="fas fa-chevron-right"></i>'
+        var ele1 = '<span >' + about.split('').join('</span><span>') + '</span>';
         var ele2 =  '<span>' + content.split('').join('</span><span>') + '</span>';
-        const more = '<a class="link" href='+hrf+'>'+' learn more '+ icon +'</a>'+'<br>'+'<br>'
-        const contact = '<a class="link" href='+hrf2+'>'+' let'+'s talk '+ icon +'</a>'
-        
+        const more = '<a class="link" href='+hrf+'>'+' learn&nbsp;more&nbsp;'+ icon +'</a>'+'<br>'+'<br>'
+        const contact = '<a class="link" href='+hrf2+'>'+'&nbsp;let'+'s&nbsp;talk&nbsp;'+ icon +'</a>'
+       
         
 
         //$(more).addClass('link')
-        var ele =ele1 + more  + ele2  + contact 
+        var ele =ele1 + more  + ele2 + contact 
+        let delay;
         function Dispaly(element){
           $(element).hide().appendTo('#content').each(function (i) {
+          delay = i
             $(this).delay(10 * i).css({
                 display: 'inline',
-                opacity: 0
+                opacity: 0,
             }).animate({
                 opacity: 1
             }, 10);
+         
         });
+        
         }
         Dispaly(ele)
-           
   </script>
+  <style>
+    .cs{
+      border-right: 2px solid #fff;
+      animation: cusor 800ms infinite 3400ms;
+      
+  }
+  @keyframes cusor{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @media screen and (max-width: 825px){
+    .quote{
+    width:100%;
+    left: 0px;
+    border-radius: 10px;
+    padding-bottom: 3rem;
+    padding-left: 50%;
+
+  }
+  }
+  @media screen and (min-width: 824px) {
+    .quote{
+    position: fixed;
+    width:15rem;
+    right: 5%;
+    top: 50%;
+    border-radius: 10px;
+    
+  }
+  }
+
+  
+  blockquote{
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #3457f3,#93bdec);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-clip: none;}
+  cite{
+    background: linear-gradient(to right, #4364f7,#23d5ab);
+    font-weight: bold;
+    text-align: right;
+    display: block;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-clip:none ;
+  }
+  
+  </style>
  
 {% endblock%}

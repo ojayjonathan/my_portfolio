@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!j+3flpayssjq!a3h3fbp9p-32lm07)f#mjkk=2ycj6l%2(h-j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['my-app-portfolio1']
 
 
 # Application definition
@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-django_heroku.settings(locals())
-SECURE_SSL_REDIRECT =True
-SESSION_COOKIE_SECURE  =True
-CSRF_COOKIE_SECURE  = True
+#django_heroku.settings(locals())
+#SECURE_SSL_REDIRECT =True
+#SESSION_COOKIE_SECURE  =True
+#CSRF_COOKIE_SECURE  = True

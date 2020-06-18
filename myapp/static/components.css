@@ -1,0 +1,272 @@
+.small-monitor{
+    position: absolute;
+    width: 8.5rem;
+    height: 11rem;
+    top: 2%;
+    border-radius: 10px;
+    background: #301353;
+    overflow: hidden;
+    border: 8px solid #d0d2f1;
+    border-bottom: 50px #a6a9d3;
+    box-shadow: -5px 5px #a6a9d3;
+    left: 10px;}  
+
+    .screen{
+        position: absolute;
+        width: 100%;
+        height: 90%;
+        background:#301353;
+        margin-top: 20px }
+        .screen li{
+            position: relative;
+            margin-top: 4px;
+            left: -20px;
+            border-radius: 5px;
+            
+        }
+        .inline-code{
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 5px;
+            background: #FF4766;
+            }
+            .green{
+            position: relative;
+            width: 90%;
+            height: 5px;
+            background: #6ADEAE;
+            }    
+            .yellow{
+            position: relative;
+            width: 80%;
+            height: 5px;
+            background: #F0FB23;
+     
+            }    
+           
+  .text{
+      position: absolute;
+      right: 3px;
+      color: #fff;
+      z-index: 10;
+  }
+.bar{
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    background:black;
+    z-index: 5;
+ }
+    .button {
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-right: 15px;
+        width: 10px;
+        height: 10px;
+        border-radius:100%;
+}
+        #red {
+            background:#FF4766
+        }
+        #yellow{
+            left: 20px;
+            background:#F0FB23;
+        }
+        #green{
+            left:40px;
+            background:#6ADEAE;
+        }
+      
+    .design {
+            transition: all 3s ease;
+            width: 25rem;
+            height: 15rem;
+            background:  #301353;
+            position: relative;
+            border-radius: 5%;
+            overflow: hidden;
+            animation: wallChange 10s ease-in-out infinite;
+
+          }
+          @keyframes wallChange{
+    0%
+        {background:  #fad0d9}
+    20%
+        {background: darken( #fad0d9, 10%)}
+    40%
+        {background:#301353}
+    60%
+        {background:  #fad0d9}
+    }
+
+
+    .main-monitor{
+        position: absolute;
+        width: 15rem;
+        height: 9rem;
+        top: 30%;
+        left: 25%;
+        border-radius: 10px;
+        background: #301353;
+        overflow: hidden;
+        border: 8px solid #c8cbeb;
+        border-bottom: 50px solid lighten(#a6a9d3, 10%);
+        box-shadow: -5px 5px #a6a9d3;
+      }
+    
+       
+      .design li {
+            position: relative;
+            height: 5px;
+            margin: 5px 0;
+            left: -20px;
+            border-radius: 5px;
+        }
+        .main-monitor li:nth-child(1n+0){
+            background:  #F0FB23;
+            width:  4rem;
+        }
+        .main-monitor li:nth-child(2n+0){
+            background:#6ADEAE;
+            width: 5rem;
+        }
+        .main-monitor li:nth-child(3n+0){
+            background: #FF4766;
+            width: 3rem;
+        }
+       
+        
+          
+        .main-monitor ul {
+            position: absolute;
+            top: 0;
+            animation: codeMove 5s linear infinite;
+        }
+        .design ul{
+            list-style: none;
+        }
+
+        
+            @keyframes cloudMove{
+                0%
+                    {left: -30%;}
+                100%
+                    {left: 100%;} 
+                } 
+       
+        @keyframes codeMove{
+        100%
+            {top: -60%;
+                    }
+                }
+                @keyframes skyChange{
+                0%
+                    {background: #aadbea;}
+                20%
+                    {background: #ff5f6d ;}
+                40%
+                    {background:#201b46;}
+                60%
+                    {background: #aadbea;}
+                    }       
+
+    .window {
+    transition: all 3s ease;
+    width: 200px;
+    height: 200px;
+    background:  #aadbea;
+    position: absolute;
+    left: 50%;
+    border: 10px solid #393d73;
+    border-radius: 10px;
+    animation: skyChange 10s ease-in-out infinite;
+    overflow: hidden ;
+    }
+    .cloud
+        {
+        position: absolute;
+        background: white;
+        width: 35px;
+        height: 30px;
+        top: 20px;
+        left: 20px;
+        border-radius: 100px ;}
+    .cloud::before{
+            content: "";
+            position: absolute;
+            position: absolute;
+            background: white;
+            width: 35px;
+            height: 30px;
+            top: 20px;
+            left: 20px;
+            border-radius: 100px ;
+            width: 30px;
+            left: -5px;
+            top: 10px;
+            animation: cloudChange 40s ease-in-out infinite;
+            }
+        .cloud::after{
+            content: "";
+            position: absolute;
+            background: white;
+            width: 35px;
+            height: 30px;
+            top: 20px;
+            left: 20px;
+            border-radius: 100px ;
+            width: 40px;
+            left: 15px;
+            top: 12px;
+            animation: cloudChange 40s ease-in-out infinite;
+            }
+
+    #first-cloud{
+        animation: cloudMove 25s linear infinite,  cloudChange 40s ease-in-out infinite
+        }
+
+    #second-cloud{
+        top: 80px;
+        left: -60px;
+        animation: cloudMove 40s 10s linear infinite,  cloudChange 40s ease-in-out infinite;
+         }
+        @keyframes cloudChange{
+    0%
+       { background: white}
+    20%
+        {background: darken(white, 10%);}
+    40%
+        {background: darken(white,30%)}
+    60%
+        {background: white}
+        }
+
+        .fa-smile{
+            color: #d39e00;
+            position: absolute;
+            font-size: 250%;
+            animation: smileMove 5s linear infinite;
+        }
+        @keyframes smileMove{
+            0%{ position: absolute;}
+            20%{
+                top: 10%;
+                left: 10%;
+            }
+            60%{
+                top: 20%;
+                left: 40%;
+            }
+           
+            
+            80%{
+                top: 10%;
+                left: 80%;
+            }
+            100%{
+                top: 5%;
+                left: 100%;
+            }
+        }

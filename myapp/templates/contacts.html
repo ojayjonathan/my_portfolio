@@ -20,14 +20,14 @@
             </div>      
             <div class="form-group">
               <label for="exampleFormControlTextarea1" class="label">message:</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" required onkeydown="keyPress(event)"></textarea>
             </div>
             <button class="btn btn-lg link " type="submit" >Submit</button>
           </form>
           <div id="message"></div>
        <div>
          <br>
-         <span style="color: #fff;">You can also get in touch through <br> Tel No <span class='link'>
+         <span style="color:#fff;">You can also get in touch through <br> Tel No <span class='link'>
            +254742446941
          </span></span>
        </div>
@@ -103,6 +103,17 @@
          
       const submit = document.getElementById('formData')
       submit.addEventListener('submit', submitButton)
+      const keyPress = function(event){
+         if (event.key ==='Enter'){
+           message = $('#exampleFormControlInput0').val()
+           email = $('#exampleFormControlTextarea1').val()
+           if (message !== '' && email !== ''){
+            submitButton(event)
+           }
+           
+         }
+      }
+
       
     
       </script>

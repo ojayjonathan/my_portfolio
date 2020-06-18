@@ -1,12 +1,13 @@
 
    .navigation{
     background-color: #050505;
-     box-shadow:0px 1px 3px 0px rgba(255,255,255,0.75) ;
+    box-shadow:0px 1px 3px 0px rgba(255,255,255,0.75) ;
+   
    }
 
    @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
    @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
-
+   @import url('https://fonts.googleapis.com/css?family=Sansita+One');
 
 
 p {
@@ -14,14 +15,16 @@ p {
   
 }
 
-
+p:first-child::first-letter{
+    font-family: Sansita One;
+}
 @media screen and (max-width:420px){
     .content{
         padding: 20px 10px 3.5rem 10px;
         
     }
     p{
-        max-width:400px;
+        width:100%;
         color: #c0c0c0;
         font-size: 1rem;
         
@@ -37,14 +40,14 @@ p {
 }
 
 
-@media screen and (max-width:776px){
+@media (min-width:420px) and (max-width:777px) {
     .content{
-        padding: 50px 20px 3.5rem 20px;
+        padding: 30px 20px 3.5rem 20px;
 
     }
     p{  
         color: #c0c0c0;
-        width: 300px;
+        width: 90%;
         font-size: 1rem;
     }
     .desription{
@@ -59,7 +62,7 @@ p {
 
 @media screen and (min-width:777px){
     .content{
-        padding: 100px 3.5rem 3.5rem 50px;
+        padding: 50px 3.5rem 3.5rem 50px;
     }
     p{
         width:500px;
@@ -74,10 +77,9 @@ p {
     }
   
 }
-
 @media screen and (min-width:1190px){
     .content{
-        padding: 100px 0px 3.5rem 50px;
+        padding: 80px 0px 3.5rem 50px;
     }
     p{
         width:700px;
@@ -97,34 +99,22 @@ p {
     font-size: 1.5rem;
     font-weight: 800;
 }
-
-
 .link, .link:hover{
     color: #F0861B;
     font-family: monospace, 'Source Code Pro';  
   
 }
-
-
-
 .label{
     color: #c0c0c0;
 }
 .fa:hover{
     opacity: 0.7;
 }
-
-
-
 .page-footer{
     position: absolute;
     bottom: 0px;
     height: 3rem;
     width: 100vw;
-  
-    
-    
-
 }
 .footer{
     background-color: #0000;
@@ -206,9 +196,7 @@ p {
       height: 20rem;
       width: 100%;
       border-radius: 4px;
-  }
-  code{
-      font-family: 'aclonica';
+      z-index: 5;
   }
   .projects{
       color: #e9548d;
@@ -225,3 +213,4 @@ p {
    margin-left: 3rem;
    border-radius: 5px;
   }
+ 
